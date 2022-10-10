@@ -30,6 +30,9 @@
     cidr_block = "0.0.0.0/0"               # Traffic from Public Subnet reaches Internet via Internet Gateway
     gateway_id = aws_internet_gateway.IGW.id
      }
+ tags = {
+    Name = "Route table Public"
+  }
  }
 # Route table for Private Subnets
  resource "aws_route_table" "PrivateRT" {    # Creating RT for Private Subnet
@@ -38,6 +41,9 @@
    cidr_block = "0.0.0.0/0"             # Traffic from Private Subnet reaches Internet via NAT Gateway
    nat_gateway_id = aws_nat_gateway.NATgw.id
    }
+ tags = {
+    Name = "Route table Private"
+  }
  }
 # Route table Association with Public Subnets
  resource "aws_route_table_association" "PublicRTassociation" {
