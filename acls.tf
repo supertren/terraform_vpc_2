@@ -1,4 +1,4 @@
-# create VPC Network access control list
+#Create VPC Network access control list
 resource "aws_network_acl" "My_VPC_Public_ACL" {
   vpc_id =  aws_vpc.Main.id 
   subnet_ids = [ aws_subnet.publicsubnets.id ]# allow ingress port 22
@@ -6,7 +6,7 @@ resource "aws_network_acl" "My_VPC_Public_ACL" {
     protocol   = "tcp"
     rule_no    = 100
     action     = "allow"
-    cidr_block = ["0.0.0.0/0"] 
+    cidr_block = "0.0.0.0/0"
     from_port  = 22
     to_port    = 22
   }
@@ -16,7 +16,7 @@ resource "aws_network_acl" "My_VPC_Public_ACL" {
     protocol   = "tcp"
     rule_no    = 200
     action     = "allow"
-    cidr_block = ["0.0.0.0/0"] 
+    cidr_block = "0.0.0.0/0" 
     from_port  = 80
     to_port    = 80
   }
@@ -26,7 +26,7 @@ resource "aws_network_acl" "My_VPC_Public_ACL" {
     protocol   = "tcp"
     rule_no    = 300
     action     = "allow"
-    cidr_block = ["0.0.0.0/0"]
+    cidr_block = "0.0.0.0/0"
     from_port  = 1024
     to_port    = 65535
   }
@@ -36,7 +36,7 @@ resource "aws_network_acl" "My_VPC_Public_ACL" {
     protocol   = "tcp"
     rule_no    = 100
     action     = "allow"
-    cidr_block = ["0.0.0.0/0"]
+    cidr_block = "0.0.0.0/0"
     from_port  = 22 
     to_port    = 22
   }
@@ -46,7 +46,7 @@ resource "aws_network_acl" "My_VPC_Public_ACL" {
     protocol   = "tcp"
     rule_no    = 200
     action     = "allow"
-    cidr_block = ["0.0.0.0/0"]
+    cidr_block = "0.0.0.0/0"
     from_port  = 80  
     to_port    = 80 
   }
@@ -56,9 +56,13 @@ resource "aws_network_acl" "My_VPC_Public_ACL" {
     protocol   = "tcp"
     rule_no    = 300
     action     = "allow"
-    cidr_block = ["0.0.0.0/0"]
+    cidr_block = "0.0.0.0/0"
     from_port  = 1024
     to_port    = 65535
-  }tags = {
+  }
+
+tags = {
     Name = "My VPC Public ACL"
-}} # end resource
+}
+}
+#end resource
