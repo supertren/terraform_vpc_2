@@ -6,7 +6,7 @@
   
 # allow ingress of port 22
   ingress {
-    cidr_blocks = var.ingressCIDRblock  
+    cidr_blocks = ["0.0.0.0/0"]  
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
@@ -14,7 +14,7 @@
  
 # allow ingress of port 80 
   ingress {
-    cidr_blocks = var.ingressCIDRblock
+    cidr_blocks = ["0.0.0.0/0"]
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
@@ -22,7 +22,7 @@
 
 # allow ingress of port 443
   ingress {
-    cidr_blocks = var.ingressCIDRblock
+    cidr_blocks = ["0.0.0.0/0"]
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
