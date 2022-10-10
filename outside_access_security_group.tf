@@ -1,8 +1,8 @@
-# Create the Public Security Group
-  resource "aws_security_group" "My_Public_VPC_Security_Group" {
+# Create the Outside access Security Group
+  resource "aws_security_group" "My_VPC_Outside_access_Security_Group" {
   vpc_id       = aws_vpc.Main.id
-  name         = "My VPC Public Security Group"
-  description  = "My VPC Public Security Group"
+  name         = "My VPC Outside access Security Group"
+  description  = "My VPC Outside access Security Group"
   
 # allow ingress of port 22
   ingress {
@@ -36,8 +36,8 @@
     cidr_blocks = ["0.0.0.0/0"]
   }
   tags = {
-   Name = "My VPC Public Security Group"
-   Description = "My VPC Public Security Group"
+   Name = "My VPC Outside access Security Group"
+   Description = "My VPC Outside access Security Group"
 }
 } 
 # end resource
