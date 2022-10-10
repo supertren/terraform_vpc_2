@@ -55,6 +55,7 @@
     subnet_id = aws_subnet.privatesubnets.id
     route_table_id = aws_route_table.PrivateRT.id
  }
+# Provides an Elastic IP resource
  resource "aws_eip" "nateIP" {
    vpc   = true
  }
