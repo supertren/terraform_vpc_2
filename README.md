@@ -2,6 +2,8 @@
 
 Terraform, Infrastructure as Code!
 
+![alt text]([http://url/to/](https://github.com/supertren/terraform_vpc_2/vpc.webp)
+
 It creates;
 * 1 VPC,
 * 1 public subnet,
