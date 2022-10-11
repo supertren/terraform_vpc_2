@@ -1,6 +1,5 @@
-# terraform_vpc_2
 # terraform-vpc
-# Miguel Alvarez
+
 Terraform, Infrastructure as Code!
 
 It creates;
