@@ -2,7 +2,7 @@
 
 Terraform, Infrastructure as Code!
 
-![alt text]([http://url/to/](https://github.com/supertren/terraform_vpc_2/vpc.webp)
+![alt text]([https://github.com/supertren/terraform_vpc_2/blob/master/vpc.jpg]https://github.com/supertren/terraform_vpc_2/blob/master/vpc.jpg)
 
 It creates;
 * 1 VPC,
